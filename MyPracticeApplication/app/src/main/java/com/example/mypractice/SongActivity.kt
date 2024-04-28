@@ -27,6 +27,12 @@ class SongActivity : AppCompatActivity() {
         binding.playbarPauseIv.setOnClickListener{
             setPlayerStatus(true)
         }
+
+        if(intent.hasExtra("title") && intent.hasExtra("singer")){
+            binding.songActivityHomeTitleTv.text = intent.getStringExtra("title")
+            binding.songActivityHomeSingerTv.text = intent.getStringExtra("singer")
+
+        }
     }
 
     fun setPlayerStatus(isPlaying : Boolean){

@@ -16,6 +16,12 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.homeReleasedAlbumImage1Iv.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, AlbumFragment()).commitAllowingStateLoss()
+        }
+        return binding.root
     }
 }
+
