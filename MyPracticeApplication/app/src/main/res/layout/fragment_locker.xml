@@ -41,7 +41,17 @@
         app:layout_constraintTop_toBottomOf="@id/locker_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="200dp"/>
+
+    <ImageView
+        android:id="@+id/locker_tab_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/flo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locker_song_tb"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/locker_song_vp"
