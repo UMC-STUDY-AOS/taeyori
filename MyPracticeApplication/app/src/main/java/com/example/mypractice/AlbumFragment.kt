@@ -23,7 +23,9 @@ class AlbumFragment : Fragment() {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
         binding.topLayerRightArrow.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.main_frm, HomeFragment()).commitAllowingStateLoss()
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, HomeFragment())
+                .commitAllowingStateLoss()
         }
 
         val albumAdapter = AlbumVPAdapter(this)
