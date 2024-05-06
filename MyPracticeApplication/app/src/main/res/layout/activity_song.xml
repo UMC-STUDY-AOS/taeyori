@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:text="가수이름"
         android:textSize="15sp"
-        android:textColor="@color/flo"
+        android:textColor="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/song_activity_home_title_tv"/>
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:text="나라는 꽃가루에\n눈이 따끔해 아야"
         android:textSize="15sp"
-        android:textColor="@color/flo"
+        android:textColor="@color/gray"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,8 +101,8 @@
 
     <ImageView
         android:id="@+id/song_activity_home_like_iv"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/ic_my_like_off"
         android:layout_marginTop="15dp"
         android:layout_marginStart="90dp"
@@ -112,54 +112,52 @@
 
     <ImageView
         android:id="@+id/song_activity_home_unlike_iv"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/btn_player_unlike_off"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/song_activity_home_like_iv"
         app:layout_constraintTop_toBottomOf="@id/song_activity_home_album_lyric_tv"/>
-
-    <View
-        android:id="@+id/song_progressbar_backgroud_view"
+    
+    <SeekBar
+        android:id="@+id/song_progressbar_sb"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/flo"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="0"
+        android:max="1000"
+        android:progressBackgroundTint="@color/gray"
+        android:progressTint="@color/blue"
+        android:thumb="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/song_activity_home_like_iv" />
-
-    <View
-        android:id="@+id/song_progressbar_view"
-        android:layout_width="50dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="20dp"
-        android:background="@color/blue"
-        app:layout_constraintBottom_toBottomOf="@+id/song_progressbar_backgroud_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/song_progressbar_backgroud_view" />
+        app:layout_constraintTop_toBottomOf="@id/song_activity_home_unlike_iv"/>
 
     <TextView
         android:id="@+id/song_start_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00:08"
+        android:text="00:00"
         android:textColor="@color/blue"
-        app:layout_constraintStart_toStartOf="@+id/song_progressbar_backgroud_view"
-        app:layout_constraintTop_toBottomOf="@+id/song_progressbar_backgroud_view" />
+        app:layout_constraintStart_toStartOf="@+id/song_progressbar_sb"
+        app:layout_constraintTop_toBottomOf="@+id/song_progressbar_sb" />
 
     <TextView
         android:id="@+id/song_end_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="01:00"
-        android:textColor="@color/flo"
-        app:layout_constraintEnd_toEndOf="@+id/song_progressbar_backgroud_view"
-        app:layout_constraintTop_toBottomOf="@+id/song_progressbar_backgroud_view" />
+        android:text="00:00"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/song_progressbar_sb"
+        app:layout_constraintTop_toBottomOf="@+id/song_progressbar_sb" />
 
     <LinearLayout
         android:id="@+id/song_activity_home_playbar"

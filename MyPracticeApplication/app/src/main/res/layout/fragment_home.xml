@@ -151,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="국내"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 android:textSize="17sp"
                 android:layout_marginTop="15dp"
                 app:layout_constraintEnd_toStartOf="@id/home_released_album_foreign_tv"
@@ -163,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="해외"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 android:textSize="17sp"
                 android:layout_marginTop="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -219,7 +219,7 @@
                 android:layout_height="wrap_content"
                 android:text="아이유(IU)"
                 android:textSize="19sp"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/home_released_album_image1_title_tv"
                 app:layout_constraintStart_toStartOf="@id/home_released_album_image1_title_tv"/>
 
@@ -229,7 +229,7 @@
                 android:layout_height="wrap_content"
                 android:text="가수"
                 android:textSize="19sp"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/home_released_album_image2_title_tv"
                 app:layout_constraintStart_toStartOf="@id/home_released_album_image2_title_tv"/>
 
@@ -312,7 +312,7 @@
                 android:layout_height="wrap_content"
                 android:text="가수"
                 android:textSize="19sp"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/home_podcasts_image1_title_tv"
                 app:layout_constraintStart_toStartOf="@id/home_podcasts_image1_title_tv"/>
 
@@ -322,7 +322,7 @@
                 android:layout_height="wrap_content"
                 android:text="가수"
                 android:textSize="19sp"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/home_podcasts_image2_title_tv"
                 app:layout_constraintStart_toStartOf="@id/home_podcasts_image2_title_tv"/>
 
@@ -374,7 +374,7 @@
                 android:layout_height="wrap_content"
                 android:text="가수"
                 android:textSize="19sp"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/home_video_collection_image1_title_tv"
                 app:layout_constraintStart_toStartOf="@id/home_video_collection_image1_title_tv"/>
 
@@ -463,7 +463,7 @@
                 android:layout_height="wrap_content"
                 android:text="(주)드림어컴퍼티 사업자 정보"
                 android:textSize="15sp"
-                android:textColor="@color/flo"
+                android:textColor="@color/gray"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

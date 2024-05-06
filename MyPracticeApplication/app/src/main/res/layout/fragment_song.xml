@@ -153,7 +153,7 @@
                         android:layout_height="wrap_content"
                         android:text="아이유 (IU)"
                         android:textSize="10sp"
-                        android:textColor="@color/flo"
+                        android:textColor="@color/gray"
                         android:layout_marginTop="3dp"
                         app:layout_constraintTop_toBottomOf="@id/album_song_list_first_title_iv"
                         app:layout_constraintStart_toStartOf="@id/album_song_list_first_title_iv"/>
@@ -216,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:text="아이유 (IU)"
                         android:textSize="10sp"
-                        android:textColor="@color/flo"
+                        android:textColor="@color/gray"
                         android:layout_marginTop="3dp"
                         app:layout_constraintTop_toBottomOf="@id/album_song_list_second_title_tv"
                         app:layout_constraintStart_toStartOf="@id/album_song_list_second_title_tv"/>
@@ -295,7 +295,7 @@
                         android:layout_height="wrap_content"
                         android:text="아이유 (IU)"
                         android:textSize="10sp"
-                        android:textColor="@color/flo"
+                        android:textColor="@color/gray"
                         android:layout_marginTop="3dp"
                         app:layout_constraintTop_toBottomOf="@id/album_song_list_third_title_iv"
                         app:layout_constraintStart_toStartOf="@id/album_song_list_third_title_iv"/>
@@ -358,7 +358,7 @@
                         android:layout_height="wrap_content"
                         android:text="아이유 (IU)"
                         android:textSize="10sp"
-                        android:textColor="@color/flo"
+                        android:textColor="@color/gray"
                         android:layout_marginTop="3dp"
                         app:layout_constraintTop_toBottomOf="@id/album_song_list_fourth_title_tv"
                         app:layout_constraintStart_toStartOf="@id/album_song_list_fourth_title_tv"/>
@@ -421,7 +421,7 @@
                         android:layout_height="wrap_content"
                         android:text="아이유 (IU)"
                         android:textSize="10sp"
-                        android:textColor="@color/flo"
+                        android:textColor="@color/gray"
                         android:layout_marginTop="3dp"
                         app:layout_constraintTop_toBottomOf="@id/album_song_list_fifth_title_tv"
                         app:layout_constraintStart_toStartOf="@id/album_song_list_fifth_title_tv"/>
@@ -484,7 +484,7 @@
                         android:layout_height="wrap_content"
                         android:text="아이유 (IU)"
                         android:textSize="10sp"
-                        android:textColor="@color/flo"
+                        android:textColor="@color/gray"
                         android:layout_marginTop="3dp"
                         app:layout_constraintTop_toBottomOf="@id/album_song_list_sixth_title_tv"
                         app:layout_constraintStart_toStartOf="@id/album_song_list_sixth_title_tv"/>
