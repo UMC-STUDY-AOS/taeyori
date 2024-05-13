@@ -1,5 +1,6 @@
 package com.example.mypractice
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -7,11 +8,14 @@ import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mypractice.databinding.ActivitySongBinding
+import com.google.gson.Gson
 
 class SongActivity : AppCompatActivity() {
     lateinit var binding : ActivitySongBinding
     lateinit var song : Song
     lateinit var timer: Timer
+    private var mediaPlayer: MediaPlayer? = null
+    private var gson: Gson = Gson()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,9 +81,25 @@ class SongActivity : AppCompatActivity() {
         timer.start()
     }
 
+    override fun onPause() {
+        super.onPause()
+        setPlayerStatus(false)
+        song.second = (binding.songProgressbarSb.progress * song.playTime)/1000
+        // sharedPreference stores simple data(login & logout etc.) to the storages inside
+        // and allow users to use afterwards
+        val sharedPreferences = getSharedPreferences("song", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val songJson = gson.toJson(song)
+        editor.putString("songData", songJson)
+
+        editor.apply() // saves data to the storage
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         timer.interrupt()
+        mediaPlayer?.release()
+        mediaPlayer = null
     }
 
     private fun initSong() {
@@ -89,7 +109,8 @@ class SongActivity : AppCompatActivity() {
                 intent.getStringExtra("singer")!!,
                 intent.getIntExtra("second", 0),
                 intent.getIntExtra("playTime", 0),
-                intent.getBooleanExtra("isPlaying", false)
+                intent.getBooleanExtra("isPlaying", false),
+                intent.getStringExtra("music")!!
             )
         }
         startTimer()
@@ -101,17 +122,21 @@ class SongActivity : AppCompatActivity() {
         binding.songStartTimeTv.text = String.format("%02d:%02d", song.second / 60, song.second % 60)
         binding.songEndTimeTv.text = String.format("%02d:%02d", song.playTime / 60, song.playTime % 60)
         binding.songProgressbarSb.progress = (song.second * 1000 / song.playTime)
-
+        val music = resources.getIdentifier(song.music, "raw", this.packageName)
+        mediaPlayer = MediaPlayer.create(this, music)
         setPlayerStatus(song.isPlaying)
     }
 
     private fun setPlayerStatus(isPlaying : Boolean){
-        if(!isPlaying){
-            binding.playbarPlayIv.visibility = View.VISIBLE
-            binding.playbarPauseIv.visibility = View.GONE
-        }else{
+        if(isPlaying){
             binding.playbarPlayIv.visibility = View.GONE
             binding.playbarPauseIv.visibility = View.VISIBLE
+            mediaPlayer?.start()
+        }else{
+            binding.playbarPlayIv.visibility = View.VISIBLE
+            binding.playbarPauseIv.visibility = View.GONE
+            if(mediaPlayer?.isPlaying == true)
+                mediaPlayer?.pause()
         }
         timer.isPlaying = isPlaying
         song.isPlaying = isPlaying
